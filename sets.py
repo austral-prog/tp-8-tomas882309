@@ -12,7 +12,7 @@ def clean_ingredients(dish_name, dish_ingredients):
     followed by the de-duped `set` of ingredients as the second item.
     """
 
-    return ()
+    return ((dish_name , set (dish_ingredients)))
 
 
 def check_drinks(drink_name, drink_ingredients):
@@ -26,6 +26,11 @@ def check_drinks(drink_name, drink_ingredients):
     name followed by "Cocktail" (includes alcohol).
 
     """
+    alcohol = tuple (ALCOHOLS)
 
-    return ""
+    if alcohol.count (drink_name) == 1:
+        return (f"{drink_name} Cocktail")
+
+    else:
+        return (f"{drink_name} Mocktail")
 
