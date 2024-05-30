@@ -26,11 +26,12 @@ def check_drinks(drink_name, drink_ingredients):
     name followed by "Cocktail" (includes alcohol).
 
     """
+    ingrediente = drink_ingredients.intersection (ALCOHOLS)
+
     alcohol = tuple (ALCOHOLS)
 
-    if alcohol.count (drink_name) == 1:
+    if alcohol.count (ingrediente) == 1:
         return (f"{drink_name} Cocktail")
 
     else:
         return (f"{drink_name} Mocktail")
-
