@@ -27,7 +27,8 @@ def check_drinks(drink_name, drink_ingredients):
 
     """
     largo = len(drink_ingredients) + len(ALCOHOLS)
-
+    
+    set (drink_ingredients)
     union = len (drink_ingredients.union (ALCOHOLS))
 
     if largo == union:
