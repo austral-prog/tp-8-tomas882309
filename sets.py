@@ -26,10 +26,11 @@ def check_drinks(drink_name, drink_ingredients):
     name followed by "Cocktail" (includes alcohol).
 
     """
-    largo = len(drink_ingredients) + len(ALCOHOLS)
+    ingredientes = set (drink_ingredients)
     
-    set (drink_ingredients)
-    union = len (drink_ingredients.union (ALCOHOLS))
+    largo = len(drink_ingredients) + len(ALCOHOLS)
+
+    union = len(ingredientes.union (ALCOHOLS))
 
     if largo == union:
         return (f"{drink_name} Mocktail")
