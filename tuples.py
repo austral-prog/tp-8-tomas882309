@@ -8,7 +8,8 @@ def get_coordinate(record):
     :return: str - the extracted map coordinate.
     """
 
-    return ""
+
+    return (record [1])
 
 
 def convert_coordinate(coordinate):
@@ -18,7 +19,7 @@ def convert_coordinate(coordinate):
     :return: tuple - the string coordinate split into its individual components.
     """
 
-    return ()
+    return (tuple (coordinate))
 
 
 def create_record(azara_record, rui_record):
@@ -28,5 +29,8 @@ def create_record(azara_record, rui_record):
     :param rui_record: tuple - a (location, coordinate, quadrant) trio.
     :return: tuple or str - the combined record (if compatible), or the string "not a match" (if incompatible).
     """
+    if tuple (azara_record [1]) == rui_record [1]:
+        return (azara_record + rui_record)
 
-    return ()
+    else:
+        return ("not a match")
